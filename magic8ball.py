@@ -23,15 +23,9 @@ def question():
     time.sleep(random.randrange(0,5))
     print(random.choice(eight_ball))
 
-question()
-
-repeat = raw_input("Would you like to ask another question? (Y or N)")
-if repeat == "y" or repeat == "Y":
+while True:
     question()
-else:
-    print "Come back if you have more questions!"
-
-
-
-
-
+    repeat = raw_input("Would you like to ask another question? (Y or N)")
+    if not (repeat == "y" or repeat == "Y"):
+        print "Come back if you have more questions!"
+        break
